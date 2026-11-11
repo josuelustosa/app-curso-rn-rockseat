@@ -1,12 +1,17 @@
-import { StyleSheet, Text, View } from "react-native";
+import { MaterialIcons } from "@react-native-vector-icons/material-icons";
+import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
 
 import { colors } from "@/styles/colors";
 
 export default function Index() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Hello React Native!</Text>
-      <Text>Meu App de Links</Text>
+      <View style={styles.header}>
+        <Image source={require("@/assets/logo.png")} style={styles.logo} />
+        <TouchableOpacity>
+          <MaterialIcons name="add" size={32} color={colors.green[300]} />
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }
@@ -14,12 +19,25 @@ export default function Index() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+    paddingTop: 62,
   },
 
   title: {
     color: colors.green[900],
     fontSize: 20,
+  },
+
+  header: {
+    paddingHorizontal: 24,
+    width: "100%",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: 32,
+  },
+
+  logo: {
+    width: 32,
+    height: 38,
   },
 });
