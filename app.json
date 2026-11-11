@@ -31,7 +31,9 @@
           "resizeMode": "contain",
           "backgroundColor": "#09090B"
         }
-      ]
+      ],
+      "@react-native-vector-icons/material-icons",
+      "expo-font"
     ],
     "experiments": {
       "typedRoutes": true
